@@ -16,7 +16,7 @@
       text-wrap: wrap;
     }
 
-    ul {
+    /* ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
@@ -38,7 +38,7 @@
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 5px;
-    }
+    } */
 
       /* Change the link color to #111 (black) on hover */
     li a:hover {
@@ -271,10 +271,19 @@
   </head>
 
   <body>
+
+    <% flash.each do |name, msg| %>
+      <ul>
+        <li> <%= msg %></li>
+      </ul>
+    <% end %>
+
     <%= yield %>
+
     <footer>
       © copyright BWB
     </footer>
+
   </body>
 
 </html>
