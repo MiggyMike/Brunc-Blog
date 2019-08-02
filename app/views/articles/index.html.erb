@@ -13,6 +13,7 @@
       <th></th>
       <th></th>
       <th> Date Created </th>
+      <th> Date Updated </th>
     </tr>
 
     <% @articles.each do |article| %>
@@ -23,6 +24,8 @@
       <td> <%= link_to 'Edit', edit_article_path(article) %></td>
       <td> <%= link_to 'Show', article_path(article) %></td>
       <td> <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?" } %></td>
+      <td> <%= article.created_at %> </td>
+      <td> <%= article.updated_at %> </td>
     </tr>
     <% end %>
   </table>
