@@ -1,6 +1,6 @@
 <div class="">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <%= link_to "BWB Blog", root_path, class: "navbar-brand", id: "logo" %>
+    <%= link_to "BWB Blog", root_path, class: "navbar-brand", id: "logo" %><span class="sr-only">(current)</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,7 +11,7 @@
           <%= link_to "Brunches", articles_path, class: "nav-item active nav-link"%>
         </li>
         <li>
-          <%= link_to "About", about_path, class: "nav-item, nav-link"%>
+          <%= link_to "About", about_path, class: "nav-item nav-link"%>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

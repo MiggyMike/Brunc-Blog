@@ -4,6 +4,8 @@
 
 @import "bootstrap";
 
+//                            NAVBAR
+
 .bg-dark {
   background-color: #060606 !important;
 }
@@ -22,15 +24,25 @@
   text-decoration: none;
 }
 
+//                           JUMBOTRONS
+
 .center {
   text-align: center;
 }
-
 .jumbotron {
+  border-radius: 0;
+}
+
+.jumbotron, #home {
   background-image: asset-url("home_jumbotron_photo.jpeg");
   background-size: cover;
+  min-height: 69vw;
+}
 
-  min-height: 500px;
+ .jumbotron, #about {
+  background-image: asset-url("about_jumbotron_photo.jpeg");
+  background-size: cover;
+  min-height: 69vw;
 }
 
 .jumbotron h1 {
@@ -56,8 +68,9 @@
 
 .btn-xlg {
   font-size: 1.7em;
-
 }
+
+//                             FOOTER
 
 footer {
   margin-top: 45px;
@@ -68,6 +81,7 @@ footer {
 
 footer a:hover {
   color: #333;
+  text-decoration: none;
 }
 
 footer small {
@@ -83,6 +97,8 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
+//                          MEDIA BREAKS
 
 @media only screen and (max-width:620px) {
   /* For mobile phones: */
