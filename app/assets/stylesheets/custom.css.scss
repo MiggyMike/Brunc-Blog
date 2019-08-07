@@ -29,6 +29,7 @@
 .center {
   text-align: center;
 }
+
 .jumbotron {
   border-radius: 0;
 }
@@ -68,6 +69,21 @@
 
 .btn-xlg {
   font-size: 1.7em;
+}
+
+//                             FORMS
+
+.right {
+  text-align: right;
+}
+
+.danger-link a {
+  color: red;
+}
+
+.danger-link a:hover {
+  color: #610202;
+  text-decoration: none;
 }
 
 //                             FOOTER
