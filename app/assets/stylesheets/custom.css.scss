@@ -86,11 +86,26 @@
   text-decoration: none;
 }
 
+.card {
+  margin-bottom: .75em;
+  background-color: #f4f4f4;
+}
+
 .article-actions {
   border-top: 1px solid #eaeaea;
   padding-top: 5px;
 }
 
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 //                             FOOTER
 
