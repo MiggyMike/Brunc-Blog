@@ -1,13 +1,16 @@
 <section class="container mt-5">
+  <h1 class="center"> Welcome to <%= @user.username %>'s page </h1>
 
-</section>
-<h1 class="center"> Welcome to <%= @user.username %>'s page </h1>
-
-<div class="row">
-  <div class="col-md-4 offset-md-4 center">
-    <%= gravatar_for @user, size: 150 %>
+  <div class="row">
+    <div class="col-md-4 offset-md-4 center">
+      <%= gravatar_for @user, size: 150 %>
+    </div>
   </div>
-</div>
 
-<h4 class="center"><%= @user.username %>'s articles</h4>
-<%= render "articles/article", obj: @user.articles %>
+  <h4 class="center"><%= @user.username %>'s articles</h4>
+  <%= content_tag(:div, will_paginate(@user_articles), class: 'pagination paginaton-sm justify-content-center') %>
+
+  <%= render "articles/article", obj: @user_articles %>
+  
+  <%= content_tag(:div, will_paginate(@user_articles), class: 'pagination paginaton-sm justify-content-center') %>
+</section>

@@ -3,6 +3,7 @@
 <h1 class="center">All BWB Bloggers</h1>
 
 <div class="center">
+  <%= content_tag(:div, will_paginate, class: 'pagination paginaton-sm justify-content-center') %>
   <% @users.each do |user| %>
     <ul class="listing">
       <div class="row">
@@ -16,6 +17,7 @@
       </div>
     </ul>
   <% end %>
+  <%= content_tag(:div, will_paginate, class: 'pagination paginaton-sm justify-content-center') %>
 </div>
 
 

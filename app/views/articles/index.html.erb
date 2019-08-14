@@ -4,7 +4,11 @@
 
   <div class="container">
 
+    <%= content_tag(:div, will_paginate, class: 'pagination paginaton-sm justify-content-center') %>
+
     <%= render "article", obj: @articles %>
+
+    <%= content_tag(:div, will_paginate, class: 'pagination paginaton-sm justify-content-center') %>
 
   </div>
 
