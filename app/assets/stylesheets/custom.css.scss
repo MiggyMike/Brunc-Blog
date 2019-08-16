@@ -4,6 +4,12 @@
 
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 //                            NAVBAR
 
 .bg-dark {
@@ -145,7 +151,29 @@ footer ul li {
   margin-left: 15px;
 }
 
+/*                         MISCELLANEOUS                           */
+
+.alert {
+  position: fixed;
+  top: 45px;
+  left: 20px;
+  right: 20px;
+}
+
+.pagination {
+  margin: .5em 0;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
 //                          MEDIA BREAKS
+
 
 @media only screen and (max-width:620px) {
   /* For mobile phones: */

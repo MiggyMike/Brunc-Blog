@@ -1,12 +1,13 @@
-<section class="conatiner mt-3">
+<section class="container mt-5">
 
   <h1 class="center">List all Articles</h1>
 
   <div class="container">
-
     <%= content_tag(:div, will_paginate, class: 'pagination paginaton-sm justify-content-center') %>
 
-    <%= render "article", obj: @articles %>
+    <div class="row">
+          <%= render "article", obj: @articles%>
+    </div>
 
     <%= content_tag(:div, will_paginate, class: 'pagination paginaton-sm justify-content-center') %>
 
