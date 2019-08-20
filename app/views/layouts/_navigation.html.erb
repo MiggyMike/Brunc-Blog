@@ -43,7 +43,7 @@
           </div>
           <div class="my-sm-0">
             <li class="nav-item btn-group dropdown">
-              <a  href="#" class="btn btn-info">Your Profile</a>
+              <a  href="#" class="btn btn-info">Your Profile <%= "Admin" if current_user.admin? %> </a>
               <a class="btn btn-info dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               </a>
             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
