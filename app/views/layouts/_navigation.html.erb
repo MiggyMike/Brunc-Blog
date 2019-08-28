@@ -29,7 +29,22 @@
             </div>
           </li>
         <% end %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "All Categories", categories_path, class: "dropdown-item" %>
+            <% Category.all.each do |category| %>
+              <%= link_to "#{category.name}", category_path(category), class: "dropdown-item" %>
+            <% end %>
+            <% if logged_in? and current_user.admin? %>
+            <div class="dropdown-divider"></div>
+            <%= link_to "Create New Category", new_category_path, class: "dropdown-item" %>
+            <% end %>
+          </div>
 
+        </li>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
@@ -39,12 +54,12 @@
       <ul class="form-inline my-2 my-lg-0 pl-0">
         <% if logged_in? %>
           <div class="mr-sm-2">
-            <%= link_to "Log out", logout_path, method: :delete, class: "btn btn-danger" %>
+            <%= link_to "Log out", logout_path, method: :delete, class: "btn btn-sm btn-danger" %>
           </div>
           <div class="my-sm-0">
             <li class="nav-item btn-group dropdown">
-              <a  href="#" class="btn btn-info">Your Profile <%= "Admin" if current_user.admin? %> </a>
-              <a class="btn btn-info dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a  href="#" class="btn btn-sm btn-info">Your Profile <%= "Admin" if current_user.admin? %> </a>
+              <a class="btn btn-sm btn-info dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
               </a>
             <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
               <%= link_to "Edit Your Profile", edit_user_path(current_user), class: "dropdown-item" %>
