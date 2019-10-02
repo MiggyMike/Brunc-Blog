@@ -1,0 +1,16 @@
+<section class="container mt-5">
+
+  <h1 class="center"><%= "Category: " + @category.name %></h1>
+
+  <div class="container">
+    <%= content_tag(:div, will_paginate(@category_articles), class: 'pagination pagination-sm justify-content-center') %>
+
+    <div class="row">
+          <%= render "articles/article", obj: @category_articles %>
+    </div>
+
+    <%= content_tag(:div, will_paginate(@category_articles), class: 'pagination pagination-sm justify-content-center') %>
+
+  </div>
+
+</section>
