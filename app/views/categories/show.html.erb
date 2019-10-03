@@ -2,6 +2,12 @@
 
   <h1 class="center"><%= "Category: " + @category.name %></h1>
 
+  <div class="row justify-content-center">
+    <% if logged_in? and current_user.admin? %>
+    <span class= "badge"> <%= link_to "Edit Category Name", edit_category_path(@category) %> </span>
+    <% end %>
+  </div>
+
   <div class="container">
     <%= content_tag(:div, will_paginate(@category_articles), class: 'pagination pagination-sm justify-content-center') %>
 
